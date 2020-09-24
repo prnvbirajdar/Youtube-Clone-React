@@ -3,11 +3,16 @@ import Input from "./Components/Input";
 import './App.css';
 
 class App extends React.Component {
-  state = { input: "" };
+  handleSearchSubmit = (searchInput)=>{
+
+    console.log(searchInput);
+  }
+
+
   render() {
     return (
       <div className="ui container">
-        <Input />{" "}
+        <Input onSearchSubmit = {this.handleSearchSubmit} />
       </div>
     );
   }

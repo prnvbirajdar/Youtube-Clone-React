@@ -5,6 +5,8 @@ class Input extends React.Component {
 
   handleForm = (e) => {
     e.preventDefault();
+
+    this.props.onSearchSubmit(this.state.searchInput)
   };
 
   render() {
